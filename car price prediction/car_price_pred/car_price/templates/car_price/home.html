@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>car price prediction </title>
+</head>
+<body>
+<h1 style="color : red ;  text-align : center" >Car price prediction </h1>
+<hr>
+<div style="color :blue ; text-align : center ">
+    <form method="post" enctype="multipart/form-data", action="." >
+        {% csrf_token %}
+        <label for="year">Year</label><br>
+        <input type="number" id="year" name="year"><br><br>
+
+        <label for="present_price">Present price</label><br>
+        <input type="number" step="0.01" id="present_price" name="present_price"><br><br>
+
+        <label for="kms">KMS driven</label><br>
+        <input type="number" id="kms" name="kms"><br><br>
+
+        <label for="owners">number of past owners</label><br>
+        <select name = "dropdown0" id="owners">
+            <option value = 1 selected>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+         </select><br><br>
+
+        <label for="fule">Fule type</label><br>
+        <select name = "dropdown1" id="fule">
+            <option value = '1' selected>Petrole</option>
+            <option value = '10'>Diesel</option>
+            <option value = '11'>CNG</option>
+         </select><br><br>
+
+        <label for="seller">Seller type</label><br>
+        <select name = "dropdown2" id="seller">
+            <option value = 0 selected>Dealer</option>
+            <option value = 1>Indevedual</option>
+         </select><br><br>
+
+        <label for="transition">Transition type</label><br>
+        <select name = "dropdown3" id="transition">
+            <option value = 1 selected>Manuel</option>
+            <option value = 0>Automatic</option>
+         </select><br><br>
+
+
+        <button type="submit" style="color : green">predict price</button>
+
+
+
+
+
+    </form>
+</div>
+
+
+</body>
+</html>
